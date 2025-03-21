@@ -16,3 +16,16 @@ function fadeOut(){
 }
 
 window.onload = fadeOut();
+
+document.addEventListener("DOMContentLoaded", function() {
+    let orderSection = document.querySelector("#order");
+    let orderButton = document.querySelector(".btn0");
+
+    if (orderButton && orderSection) {
+        orderButton.addEventListener("click", function(event) {
+            event.preventDefault();
+            orderSection.style.display = "block";
+            orderSection.scrollIntoView({ behavior: "smooth" })
+        });
+    }
+});
